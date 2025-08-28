@@ -7,13 +7,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('library', '0003_review_comment_review_rating'),
+        ("library", "0003_review_comment_review_rating"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='review',
-            name='book',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='reviews', to='library.book', verbose_name='Название книги'),
+            model_name="review",
+            name="book",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="reviews",
+                to="library.book",
+                verbose_name="Название книги",
+            ),
         ),
     ]

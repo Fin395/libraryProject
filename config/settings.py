@@ -33,7 +33,12 @@ DEBUG = True if os.getenv("DEBUG") == "True" else False
 
 ALLOWED_HOSTS = ["89.169.163.110", "127.0.0.1", "localhost", "host.docker.internal"]
 
-CSRF_TRUSTED_ORIGINS = ["http://89.169.163.110:8000", "http://127.0.0.1:80", "http://127.0.0.1", "http://127.0.0.1:8000"]
+CSRF_TRUSTED_ORIGINS = [
+    "http://89.169.163.110:8000",
+    "http://127.0.0.1:80",
+    "http://127.0.0.1",
+    "http://127.0.0.1:8000",
+]
 
 CORS_ALLOWED_ORIGINS = ["*"]
 CORS_ALLOW_CREDENTIALS = True

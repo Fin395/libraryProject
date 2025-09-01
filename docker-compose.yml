@@ -12,6 +12,8 @@ services:
       - redis
     env_file:
       - ./.env
+    networks:
+      - mynetwork
 
   nginx:
     build:
@@ -30,6 +32,8 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env
+    networks:
+      - mynetwork
 
   redis:
     image: redis:7
@@ -42,3 +46,6 @@ volumes:
   postgres_data:
   static_volume:
   redis_data:
+
+networks:
+  mynetwork:

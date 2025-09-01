@@ -25,6 +25,8 @@ services:
       - static_volume:/app/staticfiles
     depends_on:
       - web
+    networks:
+      - mynetwork
 
   db:
     image: postgres:16
@@ -45,6 +47,8 @@ services:
       - redis_data:/data
     env_file:
       - ./.env
+    networks:
+      - mynetwork
 
 volumes:
   postgres_data:

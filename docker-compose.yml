@@ -12,6 +12,8 @@ services:
       - redis
     env_file:
       - ./.env
+    environment:
+      POSTGRES_HOST: db
 
   nginx:
     build:

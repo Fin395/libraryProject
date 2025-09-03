@@ -24,12 +24,6 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    env:
-      DB_NAME: my_project
-      DB_USER: my_user
-      DB_PASSWORD: my_password
-      DB_HOST: db
-      SECRET_KEY: django-insecure-p%rm-0@w)0h#@ught!)j!p!thef@=xosdf*87r=ln6vw$2!rdz
 
     steps:
       - name: Check out code

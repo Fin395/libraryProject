@@ -12,9 +12,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# создаем и даем права на директорию для статических файлов
-RUN mkdir -p /app/staticfiles &&chmod -R 755 /app/staticfiles
-
 EXPOSE 8000
-
-CMD ["sh", "-c", "python manage.py collectstatic --noinput && python manage.py migrate && gunicorn config.wsgi:application --bind 0.0.0.0:8000 --timeout 120"]

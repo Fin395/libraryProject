@@ -11,8 +11,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = True if os.getenv("DEBUG") == "True" else False
 
-ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = ["89.169.163.110", "127.0.0.1", "localhost", "host.docker.internal"]
 CSRF_TRUSTED_ORIGINS = [
     "http://89.169.163.110:8000",
     "http://127.0.0.1:80",
